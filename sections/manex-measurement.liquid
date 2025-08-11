@@ -1,0 +1,338 @@
+{% comment %}
+  ManexHair Measurement Guide Section
+{% endcomment %}
+
+<div class="manex-measurement page-width section-{{ section.id }}-padding">
+  {% if section.settings.title != blank %}
+    <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+      <h2 class="title {{ section.settings.heading_size }} center">
+        {{ section.settings.title | escape }}
+      </h2>
+    </div>
+  {% endif %}
+
+  {% if section.settings.description != blank %}
+    <div class="rte center" style="margin-bottom: 40px;">
+      {{ section.settings.description }}
+    </div>
+  {% endif %}
+
+  <div class="measurement-guide">
+    <div class="measurement-visual">
+      <div class="head-diagram">
+        <svg viewBox="0 0 300 350" xmlns="http://www.w3.org/2000/svg">
+          <!-- Head outline -->
+          <ellipse cx="150" cy="200" rx="80" ry="100" fill="none" stroke="#333" stroke-width="2"/>
+          
+          <!-- Measurement lines -->
+          <!-- Width -->
+          <line x1="70" y1="200" x2="230" y2="200" stroke="#D4AF37" stroke-width="2"/>
+          <text x="150" y="215" text-anchor="middle" fill="#D4AF37" font-size="12">A - Breite</text>
+          
+          <!-- Length -->
+          <line x1="150" y1="100" x2="150" y2="300" stroke="#D4AF37" stroke-width="2"/>
+          <text x="165" y="200" fill="#D4AF37" font-size="12">B - Länge</text>
+          
+          <!-- Circumference -->
+          <circle cx="150" cy="150" r="70" fill="none" stroke="#D4AF37" stroke-width="2" stroke-dasharray="5,5"/>
+          <text x="150" y="80" text-anchor="middle" fill="#D4AF37" font-size="12">C - Umfang</text>
+        </svg>
+      </div>
+    </div>
+
+    <div class="measurement-form">
+      <h3>Ihre Maße eingeben:</h3>
+      <form class="measurement-calculator">
+        <div class="measurement-input">
+          <label for="width">A - Breite (cm):</label>
+          <input type="number" id="width" name="width" min="10" max="25" step="0.5" placeholder="z.B. 15.5">
+          <small>Von Ohr zu Ohr über die Stirn</small>
+        </div>
+
+        <div class="measurement-input">
+          <label for="length">B - Länge (cm):</label>
+          <input type="number" id="length" name="length" min="12" max="30" step="0.5" placeholder="z.B. 20.0">
+          <small>Von der Stirn bis zum Hinterkopf</small>
+        </div>
+
+        <div class="measurement-input">
+          <label for="circumference">C - Umfang (cm):</label>
+          <input type="number" id="circumference" name="circumference" min="50" max="70" step="0.5" placeholder="z.B. 58.5">
+          <small>Rundum den Kopf über den Ohren</small>
+        </div>
+
+        <div class="size-result">
+          <h4>Empfohlene Größe:</h4>
+          <div id="recommended-size" class="size-display">
+            Bitte alle Maße eingeben
+          </div>
+        </div>
+
+        <div class="measurement-tips">
+          <h4>Messtipps:</h4>
+          <ul>
+            <li>📏 Verwenden Sie ein flexibles Maßband</li>
+            <li>👥 Lassen Sie sich von jemand anderem helfen</li>
+            <li>📐 Messen Sie bei entspannter Kopfhaltung</li>
+            <li>✅ Kontrollieren Sie alle Maße zweimal</li>
+          </ul>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  {% if section.settings.button_label != blank %}
+    <div class="center" style="margin-top: 40px;">
+      <a href="{{ section.settings.button_link }}" class="button button--primary">
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .manex-measurement {
+    padding: 50px 0;
+    background: rgb(var(--color-background));
+  }
+
+  .measurement-guide {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+    margin-top: 40px;
+  }
+
+  .measurement-visual {
+    display: flex;
+    justify-content: center;
+  }
+
+  .head-diagram svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .measurement-form h3 {
+    color: rgb(var(--color-foreground));
+    margin-bottom: 30px;
+    font-size: 1.4rem;
+  }
+
+  .measurement-input {
+    margin-bottom: 25px;
+  }
+
+  .measurement-input label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: rgb(var(--color-foreground));
+  }
+
+  .measurement-input input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid rgb(var(--color-border));
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+  }
+
+  .measurement-input input:focus {
+    outline: none;
+    border-color: #D4AF37;
+  }
+
+  .measurement-input small {
+    display: block;
+    color: rgb(var(--color-foreground-75));
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+
+  .size-result {
+    background: rgb(var(--color-background-2));
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    text-align: center;
+  }
+
+  .size-result h4 {
+    margin-bottom: 15px;
+    color: rgb(var(--color-foreground));
+  }
+
+  .size-display {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #D4AF37;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    border: 2px solid #D4AF37;
+  }
+
+  .measurement-tips {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+  }
+
+  .measurement-tips h4 {
+    margin-bottom: 15px;
+    color: rgb(var(--color-foreground));
+  }
+
+  .measurement-tips ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  .measurement-tips li {
+    margin-bottom: 10px;
+    color: rgb(var(--color-foreground-75));
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 990px) {
+    .measurement-guide {
+      grid-template-columns: 1fr;
+      gap: 40px;
+    }
+
+    .measurement-visual {
+      order: -1;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .measurement-guide {
+      gap: 30px;
+    }
+
+    .measurement-form h3 {
+      font-size: 1.2rem;
+    }
+
+    .size-display {
+      font-size: 1.1rem;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const inputs = document.querySelectorAll('.measurement-calculator input');
+  const sizeDisplay = document.getElementById('recommended-size');
+
+  function calculateSize() {
+    const width = parseFloat(document.getElementById('width').value) || 0;
+    const length = parseFloat(document.getElementById('length').value) || 0;
+    const circumference = parseFloat(document.getElementById('circumference').value) || 0;
+
+    if (width > 0 && length > 0 && circumference > 0) {
+      let size = 'M';
+      
+      if (circumference <= 54 && width <= 14 && length <= 18) {
+        size = 'S';
+      } else if (circumference >= 62 || width >= 18 || length >= 24) {
+        size = 'XL';
+      } else if (circumference >= 58 || width >= 16 || length >= 22) {
+        size = 'L';
+      }
+
+      sizeDisplay.textContent = `Größe ${size} - Perfekt für Sie!`;
+      sizeDisplay.style.color = '#D4AF37';
+    } else {
+      sizeDisplay.textContent = 'Bitte alle Maße eingeben';
+      sizeDisplay.style.color = '#666';
+    }
+  }
+
+  inputs.forEach(input => {
+    input.addEventListener('input', calculateSize);
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "ManexHair Messanleitung",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "Kopf richtig vermessen",
+      "label": "Überschrift"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Klein"
+        },
+        {
+          "value": "h1",
+          "label": "Mittel"
+        },
+        {
+          "value": "h0",
+          "label": "Groß"
+        }
+      ],
+      "default": "h1",
+      "label": "Überschriftgröße"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "default": "<p>Mit unserer einfachen Anleitung nehmen Sie die perfekten Maße für Ihr individuelles Toupet.</p>",
+      "label": "Beschreibung"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Weiter zur Bestellung",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand oben",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand unten",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "ManexHair Messanleitung"
+    }
+  ]
+}
+{% endschema %}

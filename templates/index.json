@@ -1,0 +1,202 @@
+{
+  "sections": {
+    "image_banner": {
+      "type": "image-banner",
+      "blocks": {
+        "heading": {
+          "type": "heading",
+          "settings": {
+            "heading": "Professionelle Herrentoupets",
+            "heading_size": "h0"
+          }
+        },
+        "text": {
+          "type": "text",
+          "settings": {
+            "text": "Einfach aufsetzen - fertig! Hochwertige Toupets in 73 Farben, individuell angepasst und professionell geschnitten.",
+            "text_style": "body"
+          }
+        },
+        "button": {
+          "type": "buttons",
+          "settings": {
+            "button_label_1": "Jetzt bestellen",
+            "button_link_1": "shopify://collections/all",
+            "button_style_secondary_1": false,
+            "button_label_2": "Mehr erfahren",
+            "button_link_2": "#info",
+            "button_style_secondary_2": true
+          }
+        }
+      },
+      "block_order": [
+        "heading",
+        "text",
+        "button"
+      ],
+      "settings": {
+        "image_overlay_opacity": 40,
+        "image_height": "large",
+        "desktop_content_position": "middle-center",
+        "show_text_box": true,
+        "desktop_content_alignment": "center",
+        "color_scheme": "scheme-1",
+        "mobile_content_alignment": "center",
+        "stack_images_on_mobile": false,
+        "show_text_below": false
+      }
+    },
+    "manex_features": {
+      "type": "multicolumn",
+      "blocks": {
+        "feature1": {
+          "type": "column",
+          "settings": {
+            "title": "73 Farben verfügbar",
+            "text": "<p>🎨 Riesige Auswahl an natürlichen Haarfarben für den perfekten Look</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "feature2": {
+          "type": "column",
+          "settings": {
+            "title": "Individuelle Anpassung",
+            "text": "<p>📏 Perfekt angepasst an Ihre Kopfform mit unserem einfachen Messsystem</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "feature3": {
+          "type": "column",
+          "settings": {
+            "title": "Professioneller Schnitt",
+            "text": "<p>✂️ Von erfahrenen Friseuren geschnitten - 5 verschiedene Stile</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "feature4": {
+          "type": "column",
+          "settings": {
+            "title": "14 Tage Lieferzeit",
+            "text": "<p>🚚 Schnelle Lieferung von der Bestellung bis zur Haustür</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "feature1",
+        "feature2", 
+        "feature3",
+        "feature4"
+      ],
+      "settings": {
+        "title": "Warum ManexHair?",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true,
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "process_steps": {
+      "type": "multicolumn",
+      "blocks": {
+        "step1": {
+          "type": "column",
+          "settings": {
+            "title": "1. Farbe wählen",
+            "text": "<p>Aus 73 verschiedenen Farben die passende auswählen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step2": {
+          "type": "column",
+          "settings": {
+            "title": "2. Kopf vermessen",
+            "text": "<p>Mit unserem einfachen Guide die richtigen Maße nehmen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step3": {
+          "type": "column",
+          "settings": {
+            "title": "3. Stil auswählen",
+            "text": "<p>Einen von 5 professionellen Schnitten wählen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step4": {
+          "type": "column",
+          "settings": {
+            "title": "4. Bestellen",
+            "text": "<p>Ihr individuelles Toupet wird professionell angefertigt</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step1",
+        "step2",
+        "step3", 
+        "step4"
+      ],
+      "settings": {
+        "title": "So einfach geht's",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "Jetzt bestellen",
+        "button_link": "shopify://collections/all",
+        "swipe_on_mobile": true,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "featured_collection": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "ManexHair Toupets",
+        "heading_size": "h2",
+        "collection": "all",
+        "products_to_show": 4,
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "show_view_all": true,
+        "swipe_on_mobile": false,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": true,
+        "columns_mobile": "2",
+        "padding_top": 28,
+        "padding_bottom": 36
+      }
+    }
+  },
+  "order": [
+    "image_banner",
+    "manex_features", 
+    "process_steps",
+    "featured_collection"
+  ]
+}

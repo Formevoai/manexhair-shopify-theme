@@ -1,0 +1,254 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "vendor": {
+          "type": "text",
+          "settings": {
+            "text": "ManexHair",
+            "text_style": "uppercase"
+          }
+        },
+        "title": {
+          "type": "title"
+        },
+        "price": {
+          "type": "price"
+        },
+        "manex_info": {
+          "type": "text",
+          "settings": {
+            "text": "✓ 73 Farben verfügbar ✓ Individuelle Anpassung ✓ 14 Tage Lieferzeit ✓ €299 Festpreis",
+            "text_style": "subtitle"
+          }
+        },
+        "variant_picker": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button"
+          }
+        },
+        "quantity_selector": {
+          "type": "quantity_selector"
+        },
+        "buy_buttons": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false
+          }
+        },
+        "description": {
+          "type": "description"
+        },
+        "collapsible-row-0": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Materialien & Qualität",
+            "icon": "leather",
+            "content": "<p><strong>Premium Echthaar:</strong> 100% europäisches Remy-Haar für natürlichste Optik</p><p><strong>Basis:</strong> Atmungsaktive Monofilament-Basis für maximalen Komfort</p><p><strong>Befestigung:</strong> Sicherer Halt durch professionelle Clips und Klebestreifen</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-1": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Versand & Rückgabe",
+            "icon": "truck",
+            "content": "<p><strong>Lieferzeit:</strong> 14 Werktage nach Bestelleingang</p><p><strong>Versand:</strong> Kostenloser Versand innerhalb Deutschlands</p><p><strong>Rückgabe:</strong> 30 Tage Rückgaberecht bei ungetragener Ware</p><p><strong>Umtausch:</strong> Kostenloser Umtausch bei Größenproblemen</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-2": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Größen & Anpassung",
+            "icon": "ruler",
+            "content": "<p><strong>Verfügbare Größen:</strong> S (54-56cm), M (56-58cm), L (58-60cm), XL (60-62cm)</p><p><strong>Anpassung:</strong> Professionelle Anpassung an Ihre Kopfform</p><p><strong>Messanleitung:</strong> Detaillierte Anleitung für perfekte Maße</p><p><strong>Nachbearbeitung:</strong> Kostenloser Nachschnitt innerhalb 30 Tagen</p>",
+            "page": ""
+          }
+        },
+        "collapsible-row-3": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Pflege & Wartung",
+            "icon": "heart",
+            "content": "<p><strong>Waschen:</strong> 1-2x pro Woche mit speziellem Shampoo</p><p><strong>Styling:</strong> Hitzebeständig bis 180°C für vielseitiges Styling</p><p><strong>Lagerung:</strong> Auf speziellem Kopf oder in mitgelieferter Box</p><p><strong>Lebensdauer:</strong> 12-18 Monate bei ordnungsgemäßer Pflege</p>",
+            "page": ""
+          }
+        },
+        "share": {
+          "type": "share",
+          "settings": {
+            "share_label": "Teilen"
+          }
+        }
+      },
+      "block_order": [
+        "vendor",
+        "title",
+        "price",
+        "manex_info",
+        "variant_picker",
+        "quantity_selector",
+        "buy_buttons",
+        "description",
+        "collapsible-row-0",
+        "collapsible-row-1",
+        "collapsible-row-2",
+        "collapsible-row-3",
+        "share"
+      ],
+      "settings": {
+        "enable_sticky_info": true,
+        "gallery_layout": "stacked",
+        "media_size": "large",
+        "constrain_to_viewport": true,
+        "mobile_thumbnails": "hide",
+        "hide_variants": true,
+        "enable_video_looping": false,
+        "padding_top": 36,
+        "padding_bottom": 12
+      }
+    },
+    "manex_process": {
+      "type": "multicolumn",
+      "blocks": {
+        "step1": {
+          "type": "column",
+          "settings": {
+            "title": "1. Bestellung aufgeben",
+            "text": "<p>🛒 Wählen Sie Farbe, Größe und Stil nach Ihren Wünschen</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step2": {
+          "type": "column",
+          "settings": {
+            "title": "2. Professionelle Fertigung",
+            "text": "<p>✂️ Handwerkliche Anfertigung durch erfahrene Spezialisten</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step3": {
+          "type": "column",
+          "settings": {
+            "title": "3. Schnelle Lieferung",
+            "text": "<p>📦 Sicherer Versand direkt zu Ihnen nach Hause</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "step4": {
+          "type": "column",
+          "settings": {
+            "title": "4. Perfekter Sitz",
+            "text": "<p>👨 Einfach aufsetzen und sich wohlfühlen!</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "step1",
+        "step2",
+        "step3",
+        "step4"
+      ],
+      "settings": {
+        "title": "Ihr Weg zum perfekten Toupet",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 4,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": true,
+        "color_scheme": "scheme-2",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "manex_guarantee": {
+      "type": "multicolumn",
+      "blocks": {
+        "guarantee1": {
+          "type": "column",
+          "settings": {
+            "title": "Qualitätsgarantie",
+            "text": "<p>💎 Premium Materialien und handwerkliche Perfektion garantiert</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "guarantee2": {
+          "type": "column",
+          "settings": {
+            "title": "Passformgarantie",
+            "text": "<p>📏 Perfekter Sitz oder kostenloses Nacharbeiten</p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "guarantee3": {
+          "type": "column",
+          "settings": {
+            "title": "Zufriedenheitsgarantie",
+            "text": "<p>😊 30 Tage Rückgaberecht für ungetragene Ware</p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "guarantee1",
+        "guarantee2",
+        "guarantee3"
+      ],
+      "settings": {
+        "title": "Unsere Garantien für Sie",
+        "heading_size": "h2",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "swipe_on_mobile": false,
+        "color_scheme": "scheme-1",
+        "columns_mobile": "1",
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "settings": {
+        "heading": "Weitere ManexHair Produkte",
+        "heading_size": "h2",
+        "columns_desktop": 4,
+        "color_scheme": "scheme-1",
+        "image_ratio": "square",
+        "show_secondary_image": true,
+        "show_vendor": false,
+        "show_rating": false,
+        "columns_mobile": "2",
+        "padding_top": 36,
+        "padding_bottom": 28
+      }
+    }
+  },
+  "order": [
+    "main",
+    "manex_process",
+    "manex_guarantee",
+    "related-products"
+  ]
+}

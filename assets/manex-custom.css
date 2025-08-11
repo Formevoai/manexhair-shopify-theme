@@ -1,0 +1,374 @@
+/* ManexHair Custom Styles */
+
+:root {
+  --manex-gold: #D4AF37;
+  --manex-dark: #2C2C2C;
+  --manex-light: #F8F9FA;
+  --manex-gradient: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+}
+
+/* Brand Colors */
+.manex-gold {
+  color: var(--manex-gold) !important;
+}
+
+.manex-bg-gold {
+  background: var(--manex-gold) !important;
+  color: white !important;
+}
+
+.manex-gradient {
+  background: var(--manex-gradient) !important;
+  color: white !important;
+}
+
+/* Typography */
+.manex-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  color: var(--manex-dark);
+  line-height: 1.2;
+}
+
+.manex-subtitle {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  color: var(--manex-gold);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.9rem;
+}
+
+/* Buttons */
+.btn-manex {
+  background: var(--manex-gradient);
+  border: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+}
+
+.btn-manex:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+  color: white;
+}
+
+.btn-manex-outline {
+  background: transparent;
+  border: 2px solid var(--manex-gold);
+  color: var(--manex-gold);
+  padding: 15px 30px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.btn-manex-outline:hover {
+  background: var(--manex-gold);
+  color: white;
+  transform: translateY(-2px);
+}
+
+/* Feature Icons */
+.manex-feature-icon {
+  width: 60px;
+  height: 60px;
+  background: var(--manex-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+  color: white;
+  font-size: 24px;
+}
+
+/* Cards */
+.manex-card {
+  background: white;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 5px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border: 1px solid rgba(212, 175, 55, 0.1);
+}
+
+.manex-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  border-color: var(--manex-gold);
+}
+
+/* Process Steps */
+.manex-step {
+  position: relative;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.manex-step::before {
+  content: attr(data-step);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 50px;
+  background: var(--manex-gradient);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.manex-step h3 {
+  margin-top: 40px;
+  color: var(--manex-dark);
+  font-weight: 600;
+}
+
+.manex-step p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Color Gallery */
+.manex-color-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  padding: 15px;
+  border-radius: 12px;
+}
+
+.manex-color-item:hover {
+  transform: translateY(-5px);
+  background: rgba(212, 175, 55, 0.05);
+}
+
+.manex-color-swatch {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px solid transparent;
+  transition: border-color 0.3s ease;
+  margin-bottom: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.manex-color-item:hover .manex-color-swatch {
+  border-color: var(--manex-gold);
+}
+
+.manex-color-name {
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--manex-dark);
+  text-align: center;
+}
+
+/* Style Selection */
+.manex-style-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.manex-style-item {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 3px solid transparent;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+}
+
+.manex-style-item:hover {
+  transform: translateY(-8px);
+  border-color: var(--manex-gold);
+  box-shadow: 0 15px 40px rgba(212, 175, 55, 0.2);
+}
+
+.manex-style-item.selected {
+  border-color: var(--manex-gold);
+  background: linear-gradient(135deg, #fff9e6, white);
+}
+
+.manex-style-image {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 20px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 3px solid var(--manex-gold);
+}
+
+/* Product Cards */
+.manex-product-card {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+}
+
+.manex-product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.manex-product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.manex-product-badge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: var(--manex-gradient);
+  color: white;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.manex-product-info {
+  padding: 25px;
+}
+
+.manex-product-title {
+  font-weight: 600;
+  color: var(--manex-dark);
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+}
+
+.manex-product-price {
+  color: var(--manex-gold);
+  font-size: 1.3rem;
+  font-weight: 700;
+}
+
+/* Measurement Guide */
+.manex-measurement-input {
+  margin-bottom: 20px;
+}
+
+.manex-measurement-input label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--manex-dark);
+}
+
+.manex-measurement-input input {
+  width: 100%;
+  padding: 12px 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.manex-measurement-input input:focus {
+  outline: none;
+  border-color: var(--manex-gold);
+}
+
+.manex-size-result {
+  background: var(--manex-light);
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+  margin: 25px 0;
+  border: 2px solid var(--manex-gold);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .manex-style-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .manex-step {
+    padding: 20px 10px;
+  }
+  
+  .manex-card {
+    padding: 20px;
+  }
+  
+  .btn-manex,
+  .btn-manex-outline {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
+/* Animations */
+@keyframes manexFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.manex-fade-in {
+  animation: manexFadeIn 0.6s ease forwards;
+}
+
+/* Loading States */
+.manex-loading {
+  position: relative;
+  overflow: hidden;
+}
+
+.manex-loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.2), transparent);
+  animation: manexShimmer 1.5s infinite;
+}
+
+@keyframes manexShimmer {
+  0% { left: -100%; }
+  100% { left: 100%; }
+}
+
+/* Section Spacing */
+.section-manex {
+  padding: 80px 0;
+}
+
+@media (max-width: 768px) {
+  .section-manex {
+    padding: 50px 0;
+  }
+}

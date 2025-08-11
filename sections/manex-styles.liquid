@@ -1,0 +1,373 @@
+{% comment %}
+  ManexHair Style Selection Section
+{% endcomment %}
+
+<div class="manex-styles page-width section-{{ section.id }}-padding">
+  {% if section.settings.title != blank %}
+    <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+      <h2 class="title {{ section.settings.heading_size }} center">
+        {{ section.settings.title | escape }}
+      </h2>
+    </div>
+  {% endif %}
+
+  {% if section.settings.description != blank %}
+    <div class="rte center" style="margin-bottom: 40px;">
+      {{ section.settings.description }}
+    </div>
+  {% endif %}
+
+  <div class="styles-grid">
+    <div class="style-item" data-style="klassisch">
+      <div class="style-image">
+        <div class="style-placeholder">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fill="#8B4513"/>
+            <path d="M60 80 Q100 60 140 80 Q120 90 100 85 Q80 90 60 80" fill="#654321"/>
+            <text x="100" y="160" text-anchor="middle" fill="white" font-size="12">Klassisch</text>
+          </svg>
+        </div>
+      </div>
+      <div class="style-info">
+        <h3>Klassischer Schnitt</h3>
+        <p>Zeitloser, eleganter Look für Business und Alltag. Seitenscheitel mit natürlichem Fall.</p>
+        <div class="style-features">
+          <span class="feature">✓ Business-tauglich</span>
+          <span class="feature">✓ Pflegeleicht</span>
+          <span class="feature">✓ Vielseitig</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="style-item" data-style="modern">
+      <div class="style-image">
+        <div class="style-placeholder">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fill="#8B4513"/>
+            <path d="M50 70 Q100 50 150 70 Q130 85 100 80 Q70 85 50 70" fill="#654321"/>
+            <text x="100" y="160" text-anchor="middle" fill="white" font-size="12">Modern</text>
+          </svg>
+        </div>
+      </div>
+      <div class="style-info">
+        <h3>Moderner Schnitt</h3>
+        <p>Trendiger, jugendlicher Look mit leicht welligem Styling. Perfekt für den modernen Mann.</p>
+        <div class="style-features">
+          <span class="feature">✓ Trendy</span>
+          <span class="feature">✓ Jugendlich</span>
+          <span class="feature">✓ Dynamisch</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="style-item" data-style="kurz">
+      <div class="style-image">
+        <div class="style-placeholder">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fill="#8B4513"/>
+            <path d="M70 85 Q100 75 130 85 Q115 90 100 88 Q85 90 70 85" fill="#654321"/>
+            <text x="100" y="160" text-anchor="middle" fill="white" font-size="12">Kurz</text>
+          </svg>
+        </div>
+      </div>
+      <div class="style-info">
+        <h3>Kurzer Schnitt</h3>
+        <p>Sportlicher, praktischer Look. Ideal für aktive Männer und warme Jahreszeiten.</p>
+        <div class="style-features">
+          <span class="feature">✓ Sportlich</span>
+          <span class="feature">✓ Praktisch</span>
+          <span class="feature">✓ Kühl</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="style-item" data-style="wellig">
+      <div class="style-image">
+        <div class="style-placeholder">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fill="#8B4513"/>
+            <path d="M50 75 Q70 65 90 75 Q110 65 130 75 Q150 65 170 75 Q150 90 130 85 Q110 95 90 85 Q70 95 50 75" fill="#654321"/>
+            <text x="100" y="160" text-anchor="middle" fill="white" font-size="12">Wellig</text>
+          </svg>
+        </div>
+      </div>
+      <div class="style-info">
+        <h3>Welliger Schnitt</h3>
+        <p>Natürlich wirkende Wellen für mehr Volumen und Textur. Besonders beliebt bei reiferen Herren.</p>
+        <div class="style-features">
+          <span class="feature">✓ Natürlich</span>
+          <span class="feature">✓ Voluminös</span>
+          <span class="feature">✓ Textur</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="style-item" data-style="lang">
+      <div class="style-image">
+        <div class="style-placeholder">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="100" cy="100" r="80" fill="#8B4513"/>
+            <path d="M40 70 Q100 50 160 70 Q140 100 100 95 Q60 100 40 70" fill="#654321"/>
+            <text x="100" y="160" text-anchor="middle" fill="white" font-size="12">Lang</text>
+          </svg>
+        </div>
+      </div>
+      <div class="style-info">
+        <h3>Langer Schnitt</h3>
+        <p>Längeres Haar für einen individuellen, kreativen Look. Viele Styling-Möglichkeiten.</p>
+        <div class="style-features">
+          <span class="feature">✓ Individuell</span>
+          <span class="feature">✓ Vielseitig</span>
+          <span class="feature">✓ Kreativ</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="style-selector">
+    <h3>Gewählter Stil:</h3>
+    <div id="selected-style" class="selected-display">
+      Bitte einen Stil auswählen
+    </div>
+  </div>
+
+  {% if section.settings.button_label != blank %}
+    <div class="center" style="margin-top: 40px;">
+      <a href="{{ section.settings.button_link }}" class="button button--primary">
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .manex-styles {
+    padding: 50px 0;
+  }
+
+  .styles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+  }
+
+  .style-item {
+    background: rgb(var(--color-background-2));
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 3px solid transparent;
+  }
+
+  .style-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  }
+
+  .style-item.selected {
+    border-color: #D4AF37;
+    background: linear-gradient(135deg, #fff9e6, rgb(var(--color-background-2)));
+  }
+
+  .style-image {
+    margin-bottom: 20px;
+  }
+
+  .style-placeholder {
+    width: 120px;
+    height: 120px;
+    margin: 0 auto;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #D4AF37;
+  }
+
+  .style-placeholder svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .style-info h3 {
+    color: rgb(var(--color-foreground));
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+  }
+
+  .style-info p {
+    color: rgb(var(--color-foreground-75));
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+
+  .style-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .feature {
+    background: #D4AF37;
+    color: white;
+    padding: 5px 12px;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+
+  .style-selector {
+    margin-top: 50px;
+    text-align: center;
+    padding: 30px;
+    background: rgb(var(--color-background-2));
+    border-radius: 12px;
+  }
+
+  .style-selector h3 {
+    color: rgb(var(--color-foreground));
+    margin-bottom: 20px;
+  }
+
+  .selected-display {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #D4AF37;
+    padding: 15px 30px;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #D4AF37;
+    display: inline-block;
+    min-width: 250px;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 749px) {
+    .styles-grid {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .style-item {
+      padding: 20px;
+    }
+
+    .style-placeholder {
+      width: 100px;
+      height: 100px;
+    }
+
+    .style-info h3 {
+      font-size: 1.2rem;
+    }
+
+    .selected-display {
+      font-size: 1.1rem;
+      min-width: 200px;
+    }
+  }
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const styleItems = document.querySelectorAll('.style-item');
+  const selectedDisplay = document.getElementById('selected-style');
+  let selectedStyle = null;
+
+  styleItems.forEach(item => {
+    item.addEventListener('click', function() {
+      // Remove selected class from all items
+      styleItems.forEach(i => i.classList.remove('selected'));
+      
+      // Add selected class to clicked item
+      this.classList.add('selected');
+      
+      // Update selected style
+      selectedStyle = this.dataset.style;
+      const styleName = this.querySelector('h3').textContent;
+      selectedDisplay.textContent = styleName;
+      selectedDisplay.style.color = '#D4AF37';
+    });
+  });
+});
+</script>
+
+{% schema %}
+{
+  "name": "ManexHair Stil-Auswahl",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "5 professionelle Haarschnitte",
+      "label": "Überschrift"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Klein"
+        },
+        {
+          "value": "h1",
+          "label": "Mittel"
+        },
+        {
+          "value": "h0",
+          "label": "Groß"
+        }
+      ],
+      "default": "h1",
+      "label": "Überschriftgröße"
+    },
+    {
+      "type": "richtext",
+      "id": "description",
+      "default": "<p>Wählen Sie aus 5 professionell geschnittenen Stilen - von klassisch bis modern.</p>",
+      "label": "Beschreibung"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Jetzt bestellen",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand oben",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand unten",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "ManexHair Stil-Auswahl"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,175 @@
+{% comment %}
+  ManexHair 73 Color Gallery Section
+{% endcomment %}
+
+<div class="manex-color-gallery page-width section-{{ section.id }}-padding">
+  {% if section.settings.title != blank %}
+    <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
+      <h2 class="title {{ section.settings.heading_size }} center">
+        {{ section.settings.title | escape }}
+      </h2>
+    </div>
+  {% endif %}
+
+  <div class="color-grid grid grid--3-col-desktop grid--2-col-tablet-down">
+    {% assign colors = "Schwarz,Dunkelbraun,Braun,Hellbraun,Aschbraun,Goldbraun,Kastanienbraun,Rotbraun,Mahagoni,Kupferbraun,Schokobraun,Haselnussbraun,Karamellbraun,Honigbraun,Bernsteinbraun,Cognacbraun,Zimtbraun,Espressobraun,Mochabraun,Taupe,Dunkelblond,Mittelblond,Hellblond,Sandblond,Goldblond,Platinblond,Aschblond,Perlblond,Champagnerblond,Vanilleblond,Butterblond,Weizenblond,Karamellblond,Honigblond,Erdbeerblond,Kupferblond,Rotblond,Dunkelrot,Burgunderrot,Kirschrot,Mahagonirot,Kupferrot,Rotgold,Korallenrot,Rubinrot,Weinrot,Feuerrot,Rotorange,Kupferorange,Goldrot,Dunkelaschgrau,Mittelaschgrau,Hellaschgrau,Silbergrau,Platingrau,Perlgrau,Rauchgrau,Steingrau,Taubengrau,Stahlgrau,Anthrazitgrau,Graphitgrau,Titangrau,Zinkgrau,Bleigrau,Weissgrau,Schneeweiß,Elfenbein,Cremeweiß,Naturweiß,Salzpfeffer,Pfeffer-Salz,Silberweiß" | split: "," %}
+    
+    {% for color in colors %}
+      {% assign color_index = forloop.index %}
+      <div class="color-item" data-color="{{ color | downcase | replace: ' ', '-' }}">
+        <div class="color-swatch" style="background: var(--color-{{ color_index }}, #{{ color_index | times: 3 | append: color_index | append: color_index | append: color_index }});">
+          <span class="color-name">{{ color }}</span>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+
+  {% if section.settings.button_label != blank %}
+    <div class="center" style="margin-top: 40px;">
+      <a href="{{ section.settings.button_link }}" class="button button--primary">
+        {{ section.settings.button_label }}
+      </a>
+    </div>
+  {% endif %}
+</div>
+
+<style>
+  .manex-color-gallery {
+    padding: 50px 0;
+  }
+
+  .color-grid {
+    gap: 20px;
+    margin-top: 40px;
+  }
+
+  .color-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+  }
+
+  .color-item:hover {
+    transform: translateY(-5px);
+  }
+
+  .color-swatch {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    position: relative;
+    border: 3px solid transparent;
+    transition: border-color 0.3s ease;
+    background: linear-gradient(45deg, #8B4513, #D2691E);
+  }
+
+  .color-swatch:hover {
+    border-color: rgb(var(--color-button));
+  }
+
+  .color-name {
+    position: absolute;
+    bottom: -25px;
+    font-size: 12px;
+    font-weight: 500;
+    color: rgb(var(--color-foreground));
+    text-align: center;
+    white-space: nowrap;
+    min-width: 100px;
+  }
+
+  /* Responsive */
+  @media screen and (max-width: 749px) {
+    .color-grid {
+      grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+      gap: 15px;
+    }
+
+    .color-swatch {
+      width: 60px;
+      height: 60px;
+    }
+
+    .color-name {
+      font-size: 11px;
+      bottom: -20px;
+    }
+  }
+</style>
+
+{% schema %}
+{
+  "name": "ManexHair Farbgalerie",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "default": "73 Haarfarben zur Auswahl",
+      "label": "Überschrift"
+    },
+    {
+      "type": "select",
+      "id": "heading_size",
+      "options": [
+        {
+          "value": "h2",
+          "label": "Klein"
+        },
+        {
+          "value": "h1",
+          "label": "Mittel"
+        },
+        {
+          "value": "h0",
+          "label": "Groß"
+        }
+      ],
+      "default": "h1",
+      "label": "Überschriftgröße"
+    },
+    {
+      "type": "text",
+      "id": "button_label",
+      "default": "Farbe auswählen",
+      "label": "Button Text"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand oben",
+      "default": 36
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Abstand unten",
+      "default": 36
+    }
+  ],
+  "presets": [
+    {
+      "name": "ManexHair Farbgalerie"
+    }
+  ]
+}
+{% endschema %}
