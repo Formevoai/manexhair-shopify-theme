@@ -13,17 +13,17 @@
         "text": {
           "type": "text",
           "settings": {
-            "text": "Einfach aufsetzen - fertig! Hochwertige Toupets in 73 Farben, individuell angepasst und professionell geschnitten.",
+            "text": "✨ Einfach aufsetzen - fertig! Hochwertige Toupets in 73 Farben, individuell angepasst und professionell geschnitten. 💎 Premium Qualität für den modernen Mann.",
             "text_style": "body"
           }
         },
         "button": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "Jetzt bestellen",
+            "button_label_1": "🛒 Jetzt bestellen - €299",
             "button_link_1": "shopify://collections/all",
             "button_style_secondary_1": false,
-            "button_label_2": "Mehr erfahren",
+            "button_label_2": "📖 Mehr erfahren",
             "button_link_2": "#info",
             "button_style_secondary_2": true
           }
@@ -35,7 +35,7 @@
         "button"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
+        "image_overlay_opacity": 60,
         "image_height": "large",
         "desktop_content_position": "middle-center",
         "show_text_box": true,
@@ -52,37 +52,37 @@
         "feature1": {
           "type": "column",
           "settings": {
-            "title": "73 Farben verfügbar",
-            "text": "<p>🎨 Riesige Auswahl an natürlichen Haarfarben für den perfekten Look</p>",
-            "link_label": "",
-            "link": ""
+            "title": "🎨 73 Farben verfügbar",
+            "text": "<p><strong>RIESIGE AUSWAHL:</strong> Von natürlichem Schwarz bis zu elegantem Silbergrau - finden Sie Ihre perfekte Haarfarbe aus 73 professionellen Nuancen! 🌈</p>",
+            "link_label": "Farben ansehen",
+            "link": "/pages/farben"
           }
         },
         "feature2": {
           "type": "column",
           "settings": {
-            "title": "Individuelle Anpassung",
-            "text": "<p>📏 Perfekt angepasst an Ihre Kopfform mit unserem einfachen Messsystem</p>",
-            "link_label": "",
-            "link": ""
+            "title": "📏 Millimeter-genaue Anpassung",
+            "text": "<p><strong>PERFEKTE PASSFORM:</strong> Unser 3D-Messsystem garantiert optimalen Sitz. Jedes Toupet wird individuell nach Ihren Kopfmaßen angefertigt! 🎯</p>",
+            "link_label": "Messanleitung",
+            "link": "/pages/messanleitung"
           }
         },
         "feature3": {
           "type": "column",
           "settings": {
-            "title": "Professioneller Schnitt",
-            "text": "<p>✂️ Von erfahrenen Friseuren geschnitten - 5 verschiedene Stile</p>",
-            "link_label": "",
-            "link": ""
+            "title": "✂️ Meisterfriseur-Qualität",
+            "text": "<p><strong>HANDWERKSKUNST:</strong> Von erfahrenen Spezialisten geschnitten - 5 verschiedene Stile von klassisch bis modern. Jeder Schnitt ein Kunstwerk! 👨‍🎨</p>",
+            "link_label": "Stile entdecken",
+            "link": "/pages/stile"
           }
         },
         "feature4": {
           "type": "column",
           "settings": {
-            "title": "14 Tage Lieferzeit",
-            "text": "<p>🚚 Schnelle Lieferung von der Bestellung bis zur Haustür</p>",
-            "link_label": "",
-            "link": ""
+            "title": "🚀 Express-Lieferung 14 Tage",
+            "text": "<p><strong>BLITZSCHNELL:</strong> Von der Bestellung bis zur Haustür in nur 14 Werktagen. Inklusive kostenloser Premium-Verpackung und Pflegeset! 📦</p>",
+            "link_label": "Lieferinfo",
+            "link": "/pages/lieferung"
           }
         }
       },

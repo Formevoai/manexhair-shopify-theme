@@ -5,6 +5,9 @@
   --manex-dark: #2C2C2C;
   --manex-light: #F8F9FA;
   --manex-gradient: linear-gradient(135deg, #D4AF37 0%, #B8941F 100%);
+  --manex-hero-bg: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #D4AF37 100%);
+  --manex-shadow-gold: 0 10px 40px rgba(212, 175, 55, 0.3);
+  --manex-shadow-dark: 0 20px 60px rgba(0, 0, 0, 0.15);
 }
 
 /* Brand Colors */

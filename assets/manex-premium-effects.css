@@ -1,0 +1,297 @@
+/* Premium ManexHair Visual Effects */
+
+/* Enhanced Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, 
+    #1e3c72 0%, 
+    #2a5298 25%, 
+    #3b82c4 50%, 
+    #D4AF37 75%, 
+    #B8941F 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.3) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(184, 148, 31, 0.3) 0%, transparent 50%),
+    linear-gradient(45deg, rgba(255,255,255,0.1) 0%, transparent 100%);
+  animation: shimmer 8s ease-in-out infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.8; }
+  50% { opacity: 1; }
+}
+
+/* 3D Card Effects */
+.feature-card-3d {
+  background: linear-gradient(145deg, #ffffff 0%, #f8f9fa 100%);
+  border-radius: 20px;
+  padding: 40px 30px;
+  box-shadow: 
+    0 20px 40px rgba(0,0,0,0.1),
+    0 10px 20px rgba(0,0,0,0.05),
+    inset 0 1px 0 rgba(255,255,255,0.8);
+  transform: perspective(1000px) rotateX(0deg);
+  transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card-3d::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(212, 175, 55, 0.1), 
+    transparent);
+  transition: left 0.6s;
+}
+
+.feature-card-3d:hover {
+  transform: perspective(1000px) rotateX(5deg) translateY(-10px);
+  box-shadow: 
+    0 40px 80px rgba(0,0,0,0.15),
+    0 20px 40px rgba(212, 175, 55, 0.2),
+    inset 0 1px 0 rgba(255,255,255,0.9);
+}
+
+.feature-card-3d:hover::before {
+  left: 100%;
+}
+
+/* Animated Icons */
+.feature-icon-animated {
+  font-size: 4rem;
+  background: linear-gradient(135deg, #D4AF37, #FFD700, #B8941F);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: iconPulse 3s ease-in-out infinite;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+/* Premium Buttons */
+.btn-premium {
+  background: linear-gradient(145deg, #D4AF37, #B8941F);
+  color: white;
+  padding: 18px 36px;
+  border-radius: 50px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 
+    0 10px 30px rgba(212, 175, 55, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.btn-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(255,255,255,0.2), 
+    transparent);
+  transition: left 0.6s;
+}
+
+.btn-premium:hover {
+  transform: translateY(-3px);
+  box-shadow: 
+    0 20px 40px rgba(212, 175, 55, 0.5),
+    inset 0 1px 0 rgba(255,255,255,0.4);
+}
+
+.btn-premium:hover::before {
+  left: 100%;
+}
+
+/* Floating Elements */
+.floating-element {
+  animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-20px); }
+}
+
+/* Glass Morphism Effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 
+    0 20px 40px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+}
+
+/* Color Palette Animation */
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 15px;
+  margin: 40px 0;
+}
+
+.color-swatch-premium {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 
+    0 5px 15px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+}
+
+.color-swatch-premium::before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  right: -5px;
+  bottom: -5px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  background: linear-gradient(45deg, #D4AF37, #B8941F) border-box;
+  mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.color-swatch-premium:hover {
+  transform: scale(1.2) translateY(-5px);
+  box-shadow: 
+    0 15px 30px rgba(0,0,0,0.3),
+    0 5px 15px rgba(212, 175, 55, 0.4);
+}
+
+.color-swatch-premium:hover::before {
+  opacity: 1;
+}
+
+/* Process Steps Enhancement */
+.process-step-premium {
+  position: relative;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.process-number-premium {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 30px;
+  background: linear-gradient(135deg, #D4AF37, #B8941F);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  box-shadow: 
+    0 15px 30px rgba(212, 175, 55, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.process-number-premium::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, 
+    transparent 30%, 
+    rgba(255,255,255,0.3) 50%, 
+    transparent 70%);
+  transform: translateX(-100%);
+  animation: shine 3s ease-in-out infinite;
+}
+
+@keyframes shine {
+  0% { transform: translateX(-100%); }
+  50% { transform: translateX(100%); }
+  100% { transform: translateX(100%); }
+}
+
+/* Typography Enhancements */
+.premium-title {
+  background: linear-gradient(135deg, #D4AF37, #B8941F, #FFD700);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 800;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Loading Animation */
+.loading-shimmer {
+  background: linear-gradient(90deg, 
+    #f0f0f0 25%, 
+    #e0e0e0 50%, 
+    #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmerLoad 2s infinite;
+}
+
+@keyframes shimmerLoad {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .feature-card-3d {
+    padding: 30px 20px;
+  }
+  
+  .feature-icon-animated {
+    font-size: 3rem;
+  }
+  
+  .btn-premium {
+    padding: 15px 30px;
+    font-size: 1rem;
+  }
+  
+  .process-number-premium {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5rem;
+  }
+}
